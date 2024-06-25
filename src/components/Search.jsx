@@ -32,9 +32,9 @@ class Search extends React.Component {
                             onChange={(e) => this.setState({search: e.target.value})}
                             onKeyDown={this.handleKey}
                         />
-                        <button className="btn" onClick={() => this.props.searchMovies(this.state.search, this.state.type)}>Saerch</button>
+                        <button className="btn btn-search" onClick={() => this.props.searchMovies(this.state.search, this.state.type)}>Saerch</button>
                     </div>
-                    <div>
+                    <div className="filters">
                         <label>
                             <input className="with-gap" name="type" type="radio" data-type="all" 
                             onChange={this.handleFilter} checked={this.state.type === 'all'} />
